@@ -1,12 +1,7 @@
 import kr.ac.kaist.se.model.abst.data.EnumDomainType;
-import kr.ac.kaist.se.model.abst.data._SimDomain_;
 import kr.ac.kaist.se.model.sos.EnumOrgType;
 import kr.ac.kaist.se.model.sos.SoS;
 import kr.ac.kaist.se.model.sos.data.DataVarDomain;
-import kr.ac.kaist.se.model.sos.data.DimensionVar;
-import kr.ac.kaist.se.model.sos.data.DataVar;
-import kr.ac.kaist.se.simdata.output.intermediate.RunResult;
-import kr.ac.kaist.se.simdata.output.intermediate.UpdateResult;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;

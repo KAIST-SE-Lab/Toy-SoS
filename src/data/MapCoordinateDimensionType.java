@@ -1,6 +1,5 @@
 package data;
 
-import kr.ac.kaist.se.model.abst.data._SimDomain_;
 import kr.ac.kaist.se.model.sos.data.DimensionVar;
 import kr.ac.kaist.se.model.sos.data.DimensionVarDomain;
 
@@ -42,15 +41,15 @@ public class MapCoordinateDimensionType extends DimensionVar {
         newValue += diff;
 
         //Since MapCoordinateDimensionType has integer dataType, it returns false if it is not met.
-        if (integerData != null){
+        if (integerData != null) {
             //If newValue is out of range of varDomain
-            if(newValue < varDomain.getDomainMinVal() || newValue > varDomain.getDomainMaxVal()){
+            if (newValue < varDomain.getDomainMinVal() || newValue > varDomain.getDomainMaxVal()) {
                 timestamp = new Timestamp(System.currentTimeMillis());
                 System.out.println("[" + timestamp + "] (MapCoordinateDimensionType:checkUpdateValid) Out of domain: not moved.");
 
                 return false;
             }
-        }else{
+        } else {
             timestamp = new Timestamp(System.currentTimeMillis());
             System.out.println("[" + timestamp + "] (MapCoordinateDimensionType:checkUpdateValid) Current value is not specified yet (stringData == null).");
 
@@ -69,20 +68,20 @@ public class MapCoordinateDimensionType extends DimensionVar {
         //System.out.println(varDomain.isValidValue(newValue));
 
         //Since MapCoordinateDimensionType has integer dataType, it returns false if it is not met.
-        if (integerData != null){
+        if (integerData != null) {
 
             //If newValue is out of range of varDomain
-            if(newValue < varDomain.getDomainMinVal() || newValue > varDomain.getDomainMaxVal()){
+            if (newValue < varDomain.getDomainMinVal() || newValue > varDomain.getDomainMaxVal()) {
                 timestamp = new Timestamp(System.currentTimeMillis());
                 System.out.println("[" + timestamp + "] (MapCoordinateDimensionType) Out of domain: not moved.");
 
                 return false;
-            }else{
+            } else {
                 this.setDataCurValue(newValue + "");
             }
 
 
-        }else{
+        } else {
             return false;
         }
         return true;

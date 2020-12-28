@@ -33,7 +33,6 @@ public class ExampleCSType extends Constituent {
     }
 
 
-
     @Override
     protected void initObjLocation() {
 
@@ -53,8 +52,8 @@ public class ExampleCSType extends Constituent {
             int index = 0;
 
             // Deep copy by clone(): they have different references
-            for(DimensionVar dimVar: mySoS.getSosMap().getMapDimensions()){
-                DimensionVar clonedDimVar = (DimensionVar)dimVar.clone();
+            for (DimensionVar dimVar : mySoS.getSosMap().getMapDimensions()) {
+                DimensionVar clonedDimVar = (DimensionVar) dimVar.clone();
 
                 mapDims.add(clonedDimVar);
 //
@@ -130,7 +129,6 @@ public class ExampleCSType extends Constituent {
         initCommActions();
 
     }
-
 
 
     private void initMoveActions() {
@@ -212,7 +210,7 @@ public class ExampleCSType extends Constituent {
     /**
      * Initialization of functional actions (FuncAction)
      */
-    private void initFuncActions(){
+    private void initFuncActions() {
         ExampleFuncAction funcAction01 = new ExampleFuncAction(mySoS,
                 this,
                 "FUNC_ACTION_01",
@@ -235,7 +233,6 @@ public class ExampleCSType extends Constituent {
 
         capableActionList.add(commAction01);
     }
-
 
 
     @Override
@@ -323,7 +320,6 @@ public class ExampleCSType extends Constituent {
             return null;
         }
     }
-
 
 
 }

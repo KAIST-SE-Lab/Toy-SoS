@@ -3,8 +3,8 @@ import data.MapCoordinateDimensionType;
 import data.MapFloorDimensionDomain;
 import data.MapFloorDimensionType;
 import kr.ac.kaist.se.model.abst.data.EnumDomainType;
-import kr.ac.kaist.se.model.sos.geo.SimMap;
 import kr.ac.kaist.se.model.sos.data.DimensionVar;
+import kr.ac.kaist.se.model.sos.geo.SimMap;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -27,7 +27,7 @@ public class ToySoSMap extends SimMap {
     }
 
 
-    private void initDimensions(){
+    private void initDimensions() {
 
         /* Definition of domains for each dimension variable */
         MapCoordinateDimensionDomain xDimDomain = new MapCoordinateDimensionDomain(EnumDomainType.VALUE_RANGE, 0, 5);

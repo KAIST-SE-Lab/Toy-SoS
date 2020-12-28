@@ -1,5 +1,3 @@
-import kr.ac.kaist.se.model.abst.data._SimDataVariable_;
-import kr.ac.kaist.se.model.abst.data._SimDomain_;
 import kr.ac.kaist.se.model.sos.data.DataVar;
 import kr.ac.kaist.se.model.sos.data.DataVarDomain;
 
