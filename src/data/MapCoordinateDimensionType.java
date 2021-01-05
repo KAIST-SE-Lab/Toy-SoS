@@ -12,20 +12,13 @@ import java.sql.Timestamp;
  */
 public class MapCoordinateDimensionType extends DimensionVar {
 
-    public MapCoordinateDimensionType() {
 
+    public MapCoordinateDimensionType(String dataId, String dataName, String dataType, String dataDefaultValue) {
+        super(dataId, dataName, dataType, dataDefaultValue);
     }
 
-    public MapCoordinateDimensionType(String dataId, String dataName, String dataType) {
-        super(dataId, dataName, dataType);
-    }
-
-    public MapCoordinateDimensionType(String dataId, String dataName, String dataType, DimensionVarDomain dataDomain) {
-        super(dataId, dataName, dataType, dataDomain);
-    }
-
-    public MapCoordinateDimensionType(String dataId, String dataName, String dataType, String dataCurValue, DimensionVarDomain dataDomain) {
-        super(dataId, dataName, dataType, dataCurValue, dataDomain);
+    public MapCoordinateDimensionType(String dataId, String dataName, String dataType, String dataDefaultValue, DimensionVarDomain dataDomain) {
+        super(dataId, dataName, dataType, dataDefaultValue, dataDomain);
     }
 
     public MapCoordinateDimensionType(String dataId, String dataName, String dataType, String dataDefaultValue, String dataCurValue, DimensionVarDomain dataDomain) {

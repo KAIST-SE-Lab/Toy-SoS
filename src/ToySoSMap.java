@@ -18,16 +18,16 @@ public class ToySoSMap extends SimMap {
 
     public ToySoSMap(String mapId, String mapName) {
         super(mapId, mapName);
-        initDimensions();
+//        initDimensions();
     }
 
     public ToySoSMap(String mapId, String mapName, ArrayList<DimensionVar> mapDimensions) {
         super(mapId, mapName, mapDimensions);
-        initDimensions();
+//        initDimensions();
     }
 
-
-    private void initDimensions() {
+    @Override
+    protected void initMapDimensions() {
 
         /* Definition of domains for each dimension variable */
         MapCoordinateDimensionDomain xDimDomain = new MapCoordinateDimensionDomain(EnumDomainType.VALUE_RANGE, 0, 5);
@@ -35,21 +35,26 @@ public class ToySoSMap extends SimMap {
         MapFloorDimensionDomain floorDimDomain = new MapFloorDimensionDomain(EnumDomainType.ENUMERATION, new ArrayList<String>(Arrays.asList("FLOOR_B1", "FLOOR_1", "FLOOR_2", "FLOOR_3", "FLOOR_4", "FLOOR_5", "FLOOR_6", "FLOOR_7", "FLOOR_8")));
 
         /* Initialization of every dimension with the domains defined */
-        xDim = new MapCoordinateDimensionType("DIM_X", "xDimension", "Int", xDimDomain);
-        yDim = new MapCoordinateDimensionType("DIM_Y", "yDimension", "Int", yDimDomain);
-        floorDim = new MapFloorDimensionType("DIM_FLOOR", "floorNumDimension", "Enum", floorDimDomain);
+        xDim = new MapCoordinateDimensionType("DIM_X", "xDimension", "Int", "0", xDimDomain);
+        yDim = new MapCoordinateDimensionType("DIM_Y", "yDimension", "Int", "0", yDimDomain);
+        floorDim = new MapFloorDimensionType("DIM_FLOOR", "floorNumDimension", "Enum", "FLOOR_1", floorDimDomain);
 
         /* Add dimensions to this map */
-        mapDimensions.add(xDim);
-        mapDimensions.add(yDim);
-        mapDimensions.add(floorDim);
+        mapDimVars.add(xDim);
+        mapDimVars.add(yDim);
+        mapDimVars.add(floorDim);
 
-        timestamp = new Timestamp(System.currentTimeMillis());
-        System.out.println("[" + timestamp + "] (ToySoSMap: initDimensions) Dimensions are initialized (size:" + mapDimensions.size() + ")");
     }
 
     @Override
-    protected void initializeMap() {
+    protected void initMapInformation() {
 
     }
+
+    @Override
+    protected void buildMap(String mapInitInfo) {
+
+    }
+
+
 }

@@ -12,25 +12,18 @@ import java.sql.Timestamp;
  */
 public class MapFloorDimensionType extends DimensionVar {
 
-    public MapFloorDimensionType() {
+
+    public MapFloorDimensionType(String dataId, String dataName, String dataType, String dataDefaultValue) {
+        super(dataId, dataName, dataType, dataDefaultValue);
     }
 
-    public MapFloorDimensionType(String dataId, String dataName, String dataType) {
-        super(dataId, dataName, dataType);
-    }
-
-    public MapFloorDimensionType(String dataId, String dataName, String dataType, DimensionVarDomain dataDomain) {
-        super(dataId, dataName, dataType, dataDomain);
-    }
-
-    public MapFloorDimensionType(String dataId, String dataName, String dataType, String dataCurValue, DimensionVarDomain dataDomain) {
-        super(dataId, dataName, dataType, dataCurValue, dataDomain);
+    public MapFloorDimensionType(String dataId, String dataName, String dataType, String dataDefaultValue, DimensionVarDomain dataDomain) {
+        super(dataId, dataName, dataType, dataDefaultValue, dataDomain);
     }
 
     public MapFloorDimensionType(String dataId, String dataName, String dataType, String dataDefaultValue, String dataCurValue, DimensionVarDomain dataDomain) {
         super(dataId, dataName, dataType, dataDefaultValue, dataCurValue, dataDomain);
     }
-
 
     @Override
     public boolean checkUpdateValid(int diff) {

@@ -15,6 +15,7 @@ import kr.ac.kaist.se.model.sos.data.DataVar;
 import kr.ac.kaist.se.model.sos.data.DimensionVar;
 import kr.ac.kaist.se.model.sos.data.DimensionVarDomain;
 import kr.ac.kaist.se.model.sos.geo.ObjectLocation;
+import kr.ac.kaist.se.simdata.evnt.SimLogEvent;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -52,7 +53,7 @@ public class ExampleCSType extends Constituent {
             int index = 0;
 
             // Deep copy by clone(): they have different references
-            for (DimensionVar dimVar : mySoS.getSosMap().getMapDimensions()) {
+            for (DimensionVar dimVar : mySoS.getSosMap().getMapDimVars()) {
                 DimensionVar clonedDimVar = (DimensionVar) dimVar.clone();
 
                 mapDims.add(clonedDimVar);
@@ -252,6 +253,7 @@ public class ExampleCSType extends Constituent {
         msgDataList.add(new DataVar("MSG01_DATAVAR01",
                 "Data varabile 01 of MSG01",
                 "Int",
+                "0",
                 "30"));
 
         message.setMsgDataList(msgDataList);
